@@ -1,0 +1,21 @@
+/* cotizaciones */
+
+.cotizaciones {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.tarjetas {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card {
+    padding: 70px 9%;
+    width: 33.33%;
+    position: relative;
+    overflow: hidden;
+    background-position: center center;
+}

@@ -1,26 +1,50 @@
-let divisas = document.getElementById("divisa").value;
-let total = 0;
-
 function convertirDolar () {
     const dolarBlue = 379;
+    let divisas = parseInt(document.getElementById("divisa").value);
+    let total = 0;  
 
     if (divisas > 0 && divisas < 100000000) {
         total = divisas / dolarBlue;
-        alert(`Tus dolares son ${total}`)
+        Swal.fire({
+            icon: 'success',
+            title: 'Conversión exitosa!',
+            text: 'Tus dolares son ' + "$" + total.toFixed(2),
+            showConfirmButton: true
+        })
     }
     else {
-        alert(`No puedo convertir eso`)
+        Swal.fire({
+            icon: 'error',
+            title: 'Error...',
+            text: 'No puedo hacer esa conversión!',
+            showConfirmButton: false,
+            timer: 2000
+        })
     }
 }
 
 function convertirPesos () {
-    const dolarBlue = 379;
+    const dolarBlue = 377;
+    let divisas = document.getElementById("divisa").value;
+    let total = 0;
 
     if (divisas > 0 && divisas < 100000000) {
         total = divisas * dolarBlue;
-        alert(`Tus dolares son ${total}`)
+        
+        Swal.fire({
+            icon: 'success',
+            title: 'Conversión exitosa!',
+            text: 'Tus pesos son ' + "$" + total,
+            showConfirmButton: true
+        })
     }
     else {
-        alert(`No puedo convertir eso`)
+        Swal.fire({
+            icon: 'error',
+            title: 'Error...',
+            text: 'No puedo hacer esa conversión!',
+            showConfirmButton: false,
+            timer: 2000
+        })
     }
 }

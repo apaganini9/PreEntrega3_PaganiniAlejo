@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/style.css">
     <link rel="shortcut icon" href="../assets/images/favicon/favicon-16x16.png" type="image/x-icon">
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/prestamos.css">
     <title> Prestamos | Dinero En Movimiento </title>
 </head> 
 <body>
@@ -22,12 +22,49 @@
                 <li> <a href="./calculadora.html"> Calculadoras </a></li>
                 <li> <a href="./prestamos.html"> Prestamos </a></li>
                 <li> <a href="./cotizaciones.html"> Cotizaciones </a></li>
-                <a href="/index.html" id="btn"> <button> Log Out </button></a>
+                <a href="/index.html" id="btn"> <button> Cerrar Sesion </button></a>
             </ul>
         </nav>
     </header>
     <main>
-        
+        <div class="calcuPrestamo">
+            <div class="tituloSim">
+                <h2>
+                    Solicitá tu préstamo
+                </h2>
+            </div>
+                <div class="simulador">
+                    <input id="monto" type="number" class="form" name="monto" placeholder="Ingrese el monto" required>
+                    <br>
+                    <select name="bancos" id="bancos" required size="0" aria-placeholder="Seleccione un banco">
+                    <option value="bancoNacion"> Banco Nación </option>
+                    <option value="bancoProvincia"> Banco Provincia </option>
+                    <option value="bancoCiudad"> Banco Ciudad </option>
+                    <option value="bancoFrances"> Banco Francés </option>
+                    </select>
+                    <br>
+                    <select name="cuotas" id="cuotas" required size="0">
+                    <option value="cuotas3">3 cuotas</option>
+                    <option value="cuotas6">6 cuotas</option>
+                    <option value="cuotas12">12 cuotas</option>
+                    <option value="cuotas24">24 cuotas</option>
+                    </select>
+                    <br>
+                    <select name="tasaInteres" id="interes" required>
+                    <option value="tasa1"> 1.30 </option>
+                    <option value="tasa2"> 1.34 </option>
+                    <option value="tasa3"> 1.45 </option>
+                    <option value="tasa4"> 1.50 </option>
+                    </select>
+                <br>
+                <button id="btnPrestamo" class="botonPrestamo" onclick="elegirBanco()"> Solicitar prestamo
+                </button>
+                <br>
+                <button id="btnTasaAlta" class="botonTasaAlta" onclick="tasaMasAlta()">
+                    Tasa más alta 
+                </button>
+            </div>
+        </div>
     </main>
     <footer class="footer">
         <div class="copyright">
@@ -39,5 +76,6 @@
     </footer>
     
 </body>
-    <script src="./js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="../js/prestamos.js"></script>
 </html>
