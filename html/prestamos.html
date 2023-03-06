@@ -37,27 +37,27 @@
                     <input id="monto" type="number" class="form" name="monto" placeholder="Ingrese el monto" required>
                     <br>
                     <select name="bancos" id="bancos" required size="0" aria-placeholder="Seleccione un banco">
-                    <option value="bancoNacion"> Banco Nación </option>
-                    <option value="bancoProvincia"> Banco Provincia </option>
-                    <option value="bancoCiudad"> Banco Ciudad </option>
-                    <option value="bancoFrances"> Banco Francés </option>
+                    <option value="Banco Nacion"> Banco Nación </option>
+                    <option value="Banco Provincia"> Banco Provincia </option>
+                    <option value="Banco Ciudad"> Banco Ciudad </option>
+                    <option value="Banco Frances"> Banco Francés </option>
                     </select>
                     <br>
-                    <select name="cuotas" id="cuotas" required size="0">
-                    <option value="cuotas3">3 cuotas</option>
-                    <option value="cuotas6">6 cuotas</option>
-                    <option value="cuotas12">12 cuotas</option>
-                    <option value="cuotas24">24 cuotas</option>
+                    <select name="cuotas" id="cuotas" type="number "required size="0">
+                    <option value="3">3 cuotas</option>
+                    <option value="6">6 cuotas</option>
+                    <option value="12">12 cuotas</option>
+                    <option value="24">24 cuotas</option>
                     </select>
                     <br>
-                    <select name="tasaInteres" id="interes" required>
-                    <option value="tasa1"> 1.30 </option>
-                    <option value="tasa2"> 1.34 </option>
-                    <option value="tasa3"> 1.45 </option>
-                    <option value="tasa4"> 1.50 </option>
+                    <select name="tasaInteres" id="interes" required type="number">
+                    <option value="1.30" > 1.30 </option>
+                    <option value="1.34"> 1.34 </option>
+                    <option value="1.45"> 1.45 </option>
+                    <option value="1.50"> 1.50 </option>
                     </select>
                 <br>
-                <button id="btnPrestamo" class="botonPrestamo" onclick="elegirBanco()"> Solicitar prestamo
+                <button id="btnPrestamo" class="botonPrestamo" onclick="elegirBanco(),guardarBanco()"> Solicitar prestamo
                 </button>
                 <br>
                 <button id="btnTasaAlta" class="botonTasaAlta" onclick="tasaMasAlta()">

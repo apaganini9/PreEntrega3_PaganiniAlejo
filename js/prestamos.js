@@ -21,6 +21,9 @@ function elegirBanco (){
     let monto = document.getElementById("monto").value; 
     let bancos = document.getElementById("bancos").value;
     let interes = document.getElementById("interes").value;
+    let cuotas = document.getElementById("cuotas").value;
+
+    
 
     const bancoElegido = new Bancos (bancos, interes);
     bancoPrestamo.push(bancoElegido);
@@ -31,13 +34,14 @@ function elegirBanco (){
         bancoFinal = e.bancos
 
         if (monto > 0) {
-            let montoFinal = monto * intereses;
-            Swal.fire({
-                icon: 'success',
-                title: 'Préstamo solicitado!',
-                text: 'El prestamo solicitado en ' + bancoFinal + " es de $" + monto + " y el dinero a devolver es de " + montoFinal,
-                showConfirmButton: true
-            })
+            let montoFinal = monto * interes;
+            let devolver = montoFinal / cuotas
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Préstamo solicitado!',
+                    text: 'El prestamo solicitado en ' + bancoFinal + " es de   $" + monto + " y el dinero a devolver es de $" + montoFinal.toFixed(2) + " en " + cuotas + " cuotas" + " de $ " + devolver.toFixed(2),
+                    showConfirmButton: true
+                })
         }
         else {
             Swal.fire({
@@ -59,4 +63,3 @@ function elegirBanco (){
             })
         }
     }
-
