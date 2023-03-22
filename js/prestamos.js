@@ -1,6 +1,3 @@
-
-// let cuotas = document.getElementById("cuotas").value;
-
 let bancoPrestamo = []; 
 
 class Bancos {

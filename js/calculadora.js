@@ -1,5 +1,5 @@
 function convertirDolar () {
-    const dolarBlue = 371;
+    const dolarBlue = 383;
     let divisas = parseInt(document.getElementById("divisa").value);
     let total = 0;  
 
@@ -24,7 +24,7 @@ function convertirDolar () {
 }
 
 function convertirPesos () {
-    const dolarBlue = 371;
+    const dolarBlue = 383;
     let divisas = document.getElementById("divisa").value;
     let total = 0;
 
